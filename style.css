@@ -1,0 +1,13 @@
+body{margin:0;font-family:sans-serif;background:#111;color:#fff}
+.topbar{display:flex;justify-content:space-between;padding:10px 20px;background:#222}
+.layout{display:flex}
+.controls{width:260px;padding:10px;background:#1a1a1a}
+.stageWrap{flex:1;position:relative}
+canvas{width:100%;height:100%}
+button{margin:5px;padding:10px;border-radius:8px;border:none}
+.primary{background:#ff4d6d;color:#fff}
+.ghost{background:#333;color:#fff}
+.resultBar{position:absolute;bottom:10px;left:10px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center}
+.hidden{display:none}
+.modalCard{background:#222;padding:20px;border-radius:12px;text-align:center}
