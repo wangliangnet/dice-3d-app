@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>投骰子 0.0.14</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div>
+        <h1>🎲 投骰子</h1>
+        <p>版本 0.0.14 · 真 3D 物理骰子 · 发布日期 2026年4月28日</p>
+      </div>
+      <button id="historyBtn" class="ghost">历史记录</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel controls">
+        <label>界面风格
+          <select id="themeSelect">
+            <option value="standard">标准</option>
+            <option value="cartoon">卡通</option>
+            <option value="minimal">极简</option>
+          </select>
+        </label>
+        <label>骰子数量 1-99
+          <input id="diceCount" type="number" min="1" max="99" value="3" list="numList" />
+        </label>
+        <label>投掷次数 1-99
+          <input id="rollTimes" type="number" min="1" max="99" value="1" list="numList" />
+        </label>
+        <datalist id="numList"></datalist>
+        <button id="rollBtn" class="primary">摇动手机或点击这里开始投掷</button>
+        <div id="status" class="status">准备好了：请选择骰子数量和投掷次数。</div>
+      </section>
+
+      <section class="stageWrap">
+        <canvas id="scene"></canvas>
+        <div id="resultBar" class="resultBar">等待投掷</div>
+      </section>
+    </main>
+
+    <footer>制作人：王亮 · 联系方式：wlnet@163.com</footer>
+  </div>
+
+  <div id="resultModal" class="modal hidden">
+    <div class="modalCard">
+      <h2>🎯 投掷完成</h2>
+      <div id="resultText" class="bigText"></div>
+      <button id="blessingBtn" class="primary">查看祝福</button>
+    </div>
+  </div>
+
+  <div id="blessingModal" class="modal hidden blessingLayer">
+    <canvas id="fxCanvas"></canvas>
+    <div class="modalCard blessingCard">
+      <div id="blessingText" class="blessingText"></div>
+      <button id="confirmBlessingBtn" class="primary">收到祝福，继续好运</button>
+    </div>
+  </div>
+
+  <div id="historyModal" class="modal hidden">
+    <div class="modalCard historyCard">
+      <h2>最近 50 次投掷记录</h2>
+      <div id="historyList" class="historyList"></div>
+      <button id="closeHistoryBtn" class="ghost">关闭</button>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
