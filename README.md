@@ -1,1 +1,0 @@
-# dice-3d-app
